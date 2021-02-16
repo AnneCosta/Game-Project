@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laser.wav-3e7e1f8eefee6bcb210380aaa0c08819.sample"
+
+[deps]
+
+source_file="res://Assets/grotto_escape_pack/grotto_escape_pack/sounds/laser.wav"
+dest_files=[ "res://.import/laser.wav-3e7e1f8eefee6bcb210380aaa0c08819.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

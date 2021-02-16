@@ -1,0 +1,10 @@
+﻿cc.yal.6w4
+by YellowAfterlife
+Updated on Apr 02, 2019
+
+This font: https://yellowafterlife.itch.io/cc-yal-6w4
+More fonts: https://itch.io/c/502645/pixel-fonts
+FAQ: https://yal.cc/r/19/fonts/faq
+Licensing: https://yal.cc/r/19/fonts/license
+
+For list of supported characters, see "cc.yal.6w4 glyphs.txt"
