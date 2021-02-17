@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=10 format=2]
-=======
 [gd_scene load_steps=9 format=2]
->>>>>>> Stashed changes
 
 [ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/Nature_environment_01.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -11,25 +7,12 @@
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-<<<<<<< Updated upstream
-points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
-
-[sub_resource type="ConvexPolygonShape2D" id=2]
-=======
->>>>>>> Stashed changes
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
-<<<<<<< Updated upstream
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
-
-[sub_resource type="TileSet" id=5]
-=======
 [sub_resource type="TileSet" id=3]
->>>>>>> Stashed changes
 0/name = "Nature_environment_01.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -86,68 +69,18 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
-3/name = "Nature_environment_01.png 3"
-3/texture = ExtResource( 1 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 560, 80, 80, 80 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 3 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-3/z_index = 0
-4/name = "Nature_props_01.png 4"
-4/texture = ExtResource( 4 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 160, 80, 80 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 4 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
 
 [node name="Leveltest" type="Node2D"]
 position = Vector2( -380, -192 )
 
 [node name="TileMap" type="TileMap" parent="."]
-<<<<<<< Updated upstream
-tile_set = SubResource( 5 )
-=======
 position = Vector2( 28, 0 )
 tile_set = SubResource( 3 )
->>>>>>> Stashed changes
 cell_size = Vector2( 80, 80 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-<<<<<<< Updated upstream
-tile_data = PoolIntArray( 65535, -1610612736, 0, 13, -1073741824, 0, 131071, -1610612736, 0, 65549, -1073741824, 0, 196607, -1610612736, 0, 131085, -1073741824, 0, 262143, -1610612736, 0, 196621, -1073741824, 0, 327679, -1610612736, 0, 262157, -1073741824, 0, 393215, -1610612736, 0, 327681, 4, 0, 327693, -1073741824, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0 )
-=======
 tile_data = PoolIntArray( 262144, 0, 0, 262162, 0, 0, 327680, 0, 0, 327698, 0, 0, 393216, 0, 0, 393234, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0 )
->>>>>>> Stashed changes
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 886, 491 )
