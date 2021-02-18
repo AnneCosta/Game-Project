@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/House_WithoutDoor.png-1949a45bddc19b0c7afca83c5bb3a35d.stex"
+path="res://.import/House_WithoutDoor.png-9b14b2fd2eb4b4972fe3202739ee4f70.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WoodenHouse-Pixel/House_WithoutDoor.png"
-dest_files=[ "res://.import/House_WithoutDoor.png-1949a45bddc19b0c7afca83c5bb3a35d.stex" ]
+source_file="res://Assets/Background/parallax_mountain_pack/WoodenHouse-Pixel/House_WithoutDoor.png"
+dest_files=[ "res://.import/House_WithoutDoor.png-9b14b2fd2eb4b4972fe3202739ee4f70.stex" ]
 
 [params]
 

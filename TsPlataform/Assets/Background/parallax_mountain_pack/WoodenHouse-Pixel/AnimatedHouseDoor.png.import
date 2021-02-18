@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/House.png-be9fdefd76af633f384481ddd9c83515.stex"
+path="res://.import/AnimatedHouseDoor.png-54ba6247bba6ebb159cb98c7daeb0b3f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WoodenHouse-Pixel/House.png"
-dest_files=[ "res://.import/House.png-be9fdefd76af633f384481ddd9c83515.stex" ]
+source_file="res://Assets/Background/parallax_mountain_pack/WoodenHouse-Pixel/AnimatedHouseDoor.png"
+dest_files=[ "res://.import/AnimatedHouseDoor.png-54ba6247bba6ebb159cb98c7daeb0b3f.stex" ]
 
 [params]
 
