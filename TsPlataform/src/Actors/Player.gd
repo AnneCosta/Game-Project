@@ -3,6 +3,7 @@ extends Actor
 
 export var stomp_impulse: = 1000.0
 
+
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
@@ -10,6 +11,7 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 
 
 func _on_EnemyDetector_body_entered(body: Node) -> void:
+	$AnimationPlayer.play("death")
 	queue_free()
 
 
@@ -18,6 +20,21 @@ func _physics_process(delta: float) -> void:
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	
+func _process(delta):
+	if Input.is_action_pressed("move_right"):
+		$Player.set_flip_h(false)
+		$AnimationPlayer.play("walk")
+	elif Input.is_action_pressed("move_left"):
+		$Player.set_flip_h(true)
+		$AnimationPlayer.play("walk")
+	elif Input.is_action_pressed("jump"):
+		$AnimationPlayer.play("jump")
+	elif Input.is_action_pressed("attack"):
+		$AnimationPlayer.play("attack")
+	else:
+		$AnimationPlayer.play("idle")
+
 	
 	
 func get_direction() -> Vector2:
@@ -43,10 +60,9 @@ func calculate_move_velocity(
 	return out
 
 
-
-
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
 	var out: = linear_velocity
 	out.y = -impulse
 	return out
+
 

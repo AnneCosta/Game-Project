@@ -57,32 +57,33 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 29, 24 )
+extents = Vector2( 27.5778, 19.8514 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 38, 9 )
+extents = Vector2( 23.4411, 6.10813 )
 
 [node name="Enemy" type="KinematicBody2D"]
+scale = Vector2( 0.725222, 0.654865 )
 collision_layer = 2
 collision_mask = 9
 script = ExtResource( 2 )
 speed = Vector2( 200, 1000 )
 
 [node name="Enemy" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -40 )
-scale = Vector2( 2.65278, 2.62917 )
+position = Vector2( 1.37889, -25.9595 )
+scale = Vector2( 1.62184, 1.6074 )
 frames = SubResource( 10 )
 animation = "New Anim"
 frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -24 )
+position = Vector2( 1.37889, -19.8514 )
 shape = SubResource( 11 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( 2, -25 )
-scale = Vector2( 2.94375, 2.475 )
+position = Vector2( 1.37889, -16.7974 )
+scale = Vector2( 1.74859, 1.55847 )
 process_parent = true
 physics_process_parent = true
 
@@ -92,6 +93,6 @@ position = Vector2( 0, -26 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
-position = Vector2( 0, -32 )
+position = Vector2( 2.75778, -18.2839 )
 shape = SubResource( 12 )
 [connection signal="body_entered" from="StompDetector" to="." method="_on_StompDetector_body_entered"]
