@@ -1,66 +1,101 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://Assets/Pixel Adventure 2/Enemies/AngryPig/Idle (36x30).png" type="Texture" id=1]
+[ext_resource path="res://Assets/Pixel Adventure 2/Enemies/AngryPig/Walk (36x30).png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Enemy.gd" type="Script" id=2]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 36, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 72, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 108, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 144, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 180, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 216, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 252, 0, 36, 30 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 288, 0, 36, 30 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 324, 0, 36, 30 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 360, 0, 36, 30 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 396, 0, 36, 30 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 432, 0, 36, 30 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 468, 0, 36, 30 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 504, 0, 36, 30 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 540, 0, 36, 30 )
+
+[sub_resource type="SpriteFrames" id=29]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
 "loop": true,
-"name": "New Anim",
+"name": "walk",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 27.5778, 19.8514 )
+extents = Vector2( 18.9799, 15.4524 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 23.4411, 6.10813 )
+extents = Vector2( 26.9402, 6.8744 )
 
 [node name="Enemy" type="KinematicBody2D"]
 scale = Vector2( 0.725222, 0.654865 )
@@ -70,15 +105,13 @@ script = ExtResource( 2 )
 speed = Vector2( 200, 1000 )
 
 [node name="Enemy" type="AnimatedSprite" parent="."]
-position = Vector2( 1.37889, -25.9595 )
-scale = Vector2( 1.62184, 1.6074 )
-frames = SubResource( 10 )
-animation = "New Anim"
-frame = 1
-playing = true
+position = Vector2( 0.258396, -22.142 )
+scale = Vector2( 1.48356, 1.48356 )
+frames = SubResource( 29 )
+animation = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.37889, -19.8514 )
+position = Vector2( 1.37885, -17.6919 )
 shape = SubResource( 11 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
@@ -93,6 +126,6 @@ position = Vector2( 0, -26 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
-position = Vector2( 2.75778, -18.2839 )
+position = Vector2( 1.70629, -15.6567 )
 shape = SubResource( 12 )
 [connection signal="body_entered" from="StompDetector" to="." method="_on_StompDetector_body_entered"]

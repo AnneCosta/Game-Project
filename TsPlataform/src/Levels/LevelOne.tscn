@@ -1,8 +1,8 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/PNG/Tiles/tile11.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/sky-game.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/sky-game4.png" type="Texture" id=3]
 [ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/PNG/Tiles/tile25.png" type="Texture" id=6]
@@ -25,12 +25,15 @@
 [ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/PNG/Tiles/tile105.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/PNG/Tiles/tile95.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/PNG/Tiles/tile108.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Pisos/nature-pixel-art-environment-free-assets-pack/PNG/Tiles/tile110.png" type="Texture" id=26]
+[ext_resource path="res://src/Objects/Portal.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/Levels/LevelBoss.tscn" type="PackedScene" id=28]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 50, 50, 50, 50, 50, 0, 50 )
+points = PoolVector2Array( 0, 35, 50, 35, 50, 50, 0, 50 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 0, 50, 50, 50, 50, 50, 0, 50 )
+points = PoolVector2Array( 0, 34, 50, 35, 50, 50, 0, 50 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
@@ -63,10 +66,10 @@ points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
 points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 0, 50, 50, 50, 50, 50, 0, 50 )
+points = PoolVector2Array( 0, 34, 49, 34, 50, 50, 0, 50 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( 0, 50, 50, 50, 50, 50, 0, 50 )
+points = PoolVector2Array( 0, 35, 50, 34, 50, 50, 0, 50 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
@@ -521,16 +524,28 @@ points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 21/z_index = 0
+22/name = "tile110.png 22"
+22/texture = ExtResource( 26 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 50, 50 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
 
 [node name="Leveltest" type="Node2D"]
 __meta__ = {
-"_edit_vertical_guides_": [ 2961.0, 2959.0 ]
+"_edit_vertical_guides_": [ 3100.41 ]
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100
-scale = Vector2( 4, 1.3 )
-transform = Transform2D( 4, 0, 0, 1.3, 0, 0 )
 
 [node name="sky-game" type="TextureRect" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -543,14 +558,21 @@ __meta__ = {
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 1, 1 )
 tile_set = SubResource( 21 )
-cell_size = Vector2( 48, 50 )
-collision_layer = 8
+cell_size = Vector2( 50, 50 )
+collision_layer = 2147483656
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 458773, 10, 0, 458774, 14, 0, 458775, 9, 0, 458776, 4, 0, 458777, 9, 0, 458778, 14, 0, 458779, 11, 0, 524288, 4, 0, 524289, 11, 0, 524309, 6, 0, 524310, 19, 0, 524311, 19, 0, 524312, 19, 0, 524313, 19, 0, 524314, 19, 0, 524315, 8, 0, 589824, 19, 0, 589825, 8, 0, 589826, 10, 0, 589827, 17, 0, 589828, 18, 0, 589829, 17, 0, 589830, 18, 0, 589831, 11, 0, 589833, 10, 0, 589834, 9, 0, 589835, 13, 0, 589836, 14, 0, 589837, 13, 0, 589838, 9, 0, 589839, 14, 0, 589840, 4, 0, 589841, 14, 0, 589842, 9, 0, 589843, 4, 0, 589844, 13, 0, 589845, 9, 0, 589846, 14, 0, 589847, 4, 0, 589848, 9, 0, 589849, 4, 0, 589850, 9, 0, 589851, 4, 0, 589852, 14, 0, 589853, 13, 0, 589854, 14, 0, 655360, 19, 0, 655361, 15, 0, 655362, 16, 0, 655363, 19, 0, 655364, 19, 0, 655365, 19, 0, 655366, 19, 0, 655367, 15, 0, 655368, 21, 0, 655369, 16, 0, 655370, 19, 0, 655371, 19, 0, 655372, 19, 0, 655373, 19, 0, 655374, 19, 0, 655375, 19, 0, 655376, 19, 0, 655377, 19, 0, 655378, 19, 0, 655379, 19, 0, 655380, 19, 0, 655381, 19, 0, 655382, 19, 0, 655383, 19, 0, 655384, 19, 0, 655385, 19, 0, 655386, 19, 0, 655387, 19, 0, 655388, 19, 0, 655389, 19, 0, 655390, 19, 0, 720896, 19, 0, 720897, 19, 0, 720898, 19, 0, 720899, 19, 0, 720900, 19, 0, 720901, 19, 0, 720902, 19, 0, 720903, 19, 0, 720904, 19, 0, 720905, 19, 0, 720906, 19, 0, 720907, 19, 0, 720908, 19, 0, 720909, 19, 0, 720910, 19, 0, 720911, 19, 0, 720912, 19, 0, 720913, 19, 0, 720914, 19, 0, 720915, 19, 0, 720916, 19, 0, 720917, 19, 0, 720918, 19, 0, 720919, 19, 0, 720920, 19, 0, 720921, 19, 0, 720922, 19, 0, 720923, 19, 0, 720924, 19, 0, 720925, 19, 0, 720926, 19, 0 )
+tile_data = PoolIntArray( 65535, 19, 0, 62, 19, 0, 131071, 19, 0, 65598, 19, 0, 196607, 19, 0, 131134, 19, 0, 262143, 19, 0, 196670, 19, 0, 327679, 19, 0, 262169, 0, 0, 262170, 20, 0, 262171, 20, 0, 262172, 20, 0, 262173, 2, 0, 262206, 19, 0, 393215, 19, 0, 327712, 0, 0, 327713, 2, 0, 327718, 10, 0, 327719, 9, 0, 327720, 14, 0, 327721, 14, 0, 327722, 13, 0, 327723, 12, 0, 327738, 10, 0, 327739, 17, 0, 327740, 18, 0, 327741, 12, 0, 327742, 19, 0, 458751, 19, 0, 393219, 0, 0, 393220, 20, 0, 393221, 20, 0, 393222, 2, 0, 393254, 6, 0, 393255, 19, 0, 393256, 19, 0, 393257, 19, 0, 393258, 19, 0, 393259, 8, 0, 393273, 10, 0, 393274, 16, 0, 393275, 19, 0, 393276, 19, 0, 393277, 8, 0, 393278, 19, 0, 524287, 19, 0, 458770, 10, 0, 458771, 14, 0, 458772, 9, 0, 458773, 4, 0, 458774, 9, 0, 458775, 14, 0, 458776, 11, 0, 458789, 10, 0, 458790, 16, 0, 458791, 19, 0, 458792, 19, 0, 458793, 19, 0, 458794, 19, 0, 458795, 8, 0, 458808, 10, 0, 458809, 16, 0, 458810, 19, 0, 458811, 19, 0, 458812, 19, 0, 458813, 8, 0, 458814, 19, 0, 589823, 19, 0, 524288, 4, 0, 524289, 11, 0, 524297, 10, 0, 524298, 12, 0, 524306, 6, 0, 524307, 19, 0, 524308, 19, 0, 524309, 19, 0, 524310, 19, 0, 524311, 19, 0, 524312, 8, 0, 524325, 6, 0, 524326, 19, 0, 524327, 19, 0, 524328, 19, 0, 524329, 19, 0, 524330, 19, 0, 524331, 8, 0, 524344, 6, 0, 524345, 19, 0, 524346, 19, 0, 524347, 19, 0, 524348, 19, 0, 524349, 8, 0, 524350, 19, 0, 655359, 19, 0, 589824, 19, 0, 589825, 8, 0, 589826, 10, 0, 589827, 17, 0, 589828, 18, 0, 589829, 17, 0, 589830, 18, 0, 589831, 17, 0, 589832, 18, 0, 589833, 16, 0, 589834, 15, 0, 589835, 13, 0, 589836, 14, 0, 589837, 13, 0, 589838, 9, 0, 589839, 14, 0, 589840, 4, 0, 589841, 14, 0, 589842, 9, 0, 589843, 4, 0, 589844, 13, 0, 589845, 9, 0, 589846, 14, 0, 589847, 4, 0, 589848, 9, 0, 589849, 4, 0, 589850, 9, 0, 589851, 4, 0, 589852, 14, 0, 589853, 13, 0, 589854, 14, 0, 589855, 9, 0, 589856, 4, 0, 589857, 9, 0, 589858, 4, 0, 589859, 14, 0, 589860, 13, 0, 589861, 9, 0, 589862, 9, 0, 589863, 4, 0, 589864, 9, 0, 589865, 4, 0, 589866, 14, 0, 589867, 13, 0, 589868, 14, 0, 589869, 9, 0, 589870, 4, 0, 589871, 9, 0, 589872, 4, 0, 589873, 14, 0, 589874, 13, 0, 589875, 14, 0, 589876, 9, 0, 589877, 4, 0, 589878, 9, 0, 589879, 4, 0, 589880, 14, 0, 589881, 13, 0, 589882, 14, 0, 589883, 9, 0, 589884, 4, 0, 589885, 9, 0, 589886, 19, 0, 720895, 19, 0, 655360, 19, 0, 655361, 15, 0, 655362, 16, 0, 655363, 19, 0, 655364, 19, 0, 655365, 19, 0, 655366, 19, 0, 655367, 19, 0, 655368, 19, 0, 655369, 19, 0, 655370, 19, 0, 655371, 19, 0, 655372, 19, 0, 655373, 19, 0, 655374, 19, 0, 655375, 19, 0, 655376, 19, 0, 655377, 19, 0, 655378, 19, 0, 655379, 19, 0, 655380, 19, 0, 655381, 19, 0, 655382, 19, 0, 655383, 19, 0, 655384, 19, 0, 655385, 19, 0, 655386, 19, 0, 655387, 19, 0, 655388, 19, 0, 655389, 19, 0, 655390, 19, 0, 655391, 19, 0, 655392, 19, 0, 655393, 19, 0, 655394, 19, 0, 655395, 19, 0, 655396, 19, 0, 655397, 19, 0, 655398, 19, 0, 655399, 19, 0, 655400, 19, 0, 655401, 19, 0, 655402, 19, 0, 655403, 19, 0, 655404, 19, 0, 655405, 19, 0, 655406, 19, 0, 655407, 19, 0, 655408, 19, 0, 655409, 19, 0, 655410, 19, 0, 655411, 19, 0, 655412, 19, 0, 655413, 19, 0, 655414, 19, 0, 655415, 19, 0, 655416, 19, 0, 655417, 19, 0, 655418, 19, 0, 655419, 19, 0, 655420, 19, 0, 655421, 19, 0, 655422, 19, 0, 786431, 19, 0, 720896, 19, 0, 720897, 19, 0, 720898, 19, 0, 720899, 19, 0, 720900, 19, 0, 720901, 19, 0, 720902, 19, 0, 720903, 19, 0, 720904, 19, 0, 720905, 19, 0, 720906, 19, 0, 720907, 19, 0, 720908, 19, 0, 720909, 19, 0, 720910, 19, 0, 720911, 19, 0, 720912, 19, 0, 720913, 19, 0, 720914, 19, 0, 720915, 19, 0, 720916, 19, 0, 720917, 19, 0, 720918, 19, 0, 720919, 19, 0, 720920, 19, 0, 720921, 19, 0, 720922, 19, 0, 720923, 19, 0, 720924, 19, 0, 720925, 19, 0, 720926, 19, 0, 720927, 19, 0, 720928, 19, 0, 720929, 19, 0, 720930, 19, 0, 720931, 19, 0, 720932, 19, 0, 720933, 19, 0, 720934, 19, 0, 720935, 19, 0, 720936, 19, 0, 720937, 19, 0, 720938, 19, 0, 720939, 19, 0, 720940, 19, 0, 720941, 19, 0, 720942, 19, 0, 720943, 19, 0, 720944, 19, 0, 720945, 19, 0, 720946, 19, 0, 720947, 19, 0, 720948, 19, 0, 720949, 19, 0, 720950, 19, 0, 720951, 19, 0, 720952, 19, 0, 720953, 19, 0, 720954, 19, 0, 720955, 19, 0, 720956, 19, 0, 720957, 19, 0, 720958, 19, 0 )
+
+[node name="Portal" parent="TileMap" instance=ExtResource( 27 )]
+position = Vector2( 3023.86, 251.365 )
+next_scene = ExtResource( 28 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 41, 399 )
+position = Vector2( 193.655, 448.95 )
+speed = Vector2( 200, 800 )
+gravity = 2500.0
+stomp_impulse = 500.0
 
 [node name="Player" parent="Player" index="0"]
 position = Vector2( 2.70791, -19.3482 )
@@ -559,25 +581,94 @@ position = Vector2( 2.70791, -19.3482 )
 position = Vector2( 0.651779, -15.8202 )
 
 [node name="Camera2D" parent="Player" index="2"]
-position = Vector2( 336, -180 )
-limit_right = 2959
+position = Vector2( -42, -397 )
+limit_right = 3100
 
 [node name="CollisionShape2D" parent="Player/EnemyDetector" index="0"]
 position = Vector2( 1.35968, -17.3482 )
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 542.158, 451.228 )
+position = Vector2( 646.943, 451.228 )
+speed = Vector2( 100, 1000 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 905.29, 451.247 )
+position = Vector2( 781.388, 450.434 )
+speed = Vector2( 100, 1000 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1403.62, 451.986 )
+speed = Vector2( 100, 1000 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1648.75, 451.943 )
+speed = Vector2( 100, 1000 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2309.58, 451.872 )
+speed = Vector2( 100, 1000 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2488.03, 451.469 )
+speed = Vector2( 100, 1000 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2646.75, 452.591 )
+speed = Vector2( 100, 1000 )
 
 [node name="Coin" parent="." instance=ExtResource( 4 )]
-position = Vector2( 202.165, 433.08 )
+position = Vector2( 255.96, 426.11 )
 
-[node name="Coin2" parent="Coin" instance=ExtResource( 4 )]
-position = Vector2( 522.567, -1.33231 )
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1162.9, 325.535 )
 
-[node name="Coin3" parent="Coin" instance=ExtResource( 4 )]
-position = Vector2( 90.7842, 0.444092 )
+[node name="Coin3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 981.036, 327.309 )
+
+[node name="Coin4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 197.215, 313.726 )
+
+[node name="Coin5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 306.728, 314.292 )
+
+[node name="Coin6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1305.28, 216.38 )
+
+[node name="Coin7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1376.43, 217.716 )
+
+[node name="Coin8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1449.39, 218.393 )
+
+[node name="Coin9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1651.84, 271.179 )
+
+[node name="Coin10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1470.84, 431.179 )
+
+[node name="Coin11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1596.84, 431.179 )
+
+[node name="Coin12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 702.842, 431.179 )
+
+[node name="Coin13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2045.84, 224.179 )
+
+[node name="Coin14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1959.84, 224.179 )
+
+[node name="Coin15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2131.84, 225.179 )
+
+[node name="Coin16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2395.88, 433.721 )
+
+[node name="Coin17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2570.79, 433.721 )
+
+[node name="Coin18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2733.08, 432.88 )
 
 [editable path="Player"]
+
+[editable path="Coin"]
